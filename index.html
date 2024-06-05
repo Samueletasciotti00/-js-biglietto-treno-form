@@ -11,38 +11,48 @@
 <body>
     <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
-    <div>
+    <div class="contain">
         <!-- PASSEGGERO -->
         <div>
-            <span>Nome Cognome</span>
+            <div>
+                <span>Nome Cognome</span>
+            </div>
             <input id="utenteN" type="text">
         </div>
 
         <!-- KM DA PERCORRERE -->
         <div>
-            <span>KM da percorrere</span>
+            <div>
+                <span>KM da percorrere</span>
+            </div>
             <input id="destination" value="0" type="number">
         </div>
 
         <!-- ANNI PASSEGGERO -->
         <div>
-            <span>Fascia d'età</span>
-            <select name="" id="seniority">
-                <option disabled selected value="0">seleziona</option>
-                <option value="minorenne">Minorenne</option>
-                <option value="maggiorenne">Maggiorenne</option>
-                <option value="senior">Senior</option>
-            </select>
+            <div>
+                <span>Fascia d'età</span>
+            </div> 
+            
+            <div>
+                <select name="" id="seniority">
+                    <option disabled selected value="0">seleziona</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+                
         </div>
 
         <!-- BUTTONS -->
-        <div><button id="conferma">Genera</button></div>
-        <div><button id="annulla">Annulla</button></div>
+        <button id="conferma">Genera</button>
+       <button id="annulla">Annulla</button>
     </div>
 
     <h2>IL TUO BIGLIETTO</h2>
 
-    <div class="grid-container">
+    <div class="grid-container contain">
         <!-- PASSEGGERO -->
         <div class="grid-item">
             <h3>Nome Passeggero</h3>
