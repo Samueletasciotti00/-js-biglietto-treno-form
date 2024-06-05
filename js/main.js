@@ -1,6 +1,8 @@
 //1) Controllare anni e senioriti
 //2) Stampare in console i risultati
 
+
+// FUNZIONE PER EMISSIONE DATI
 document.getElementById('conferma').addEventListener('click',
   function(){
 
@@ -40,7 +42,7 @@ document.getElementById('conferma').addEventListener('click',
             document.getElementById('offer').innerHTML = 'Offerta Junior';
 
             //Stampaggio Prezzo
-            document.getElementById('cost').innerHTML = priceN;
+            document.getElementById('cost').innerHTML = priceN + '€';
         } else if(age === "senior") {
             priceN = (priceN * 0.6).toFixed(2);
             console.log(priceN)
@@ -49,7 +51,7 @@ document.getElementById('conferma').addEventListener('click',
             document.getElementById('offer').innerHTML = 'Offerta Senior';
 
             //Stampaggio Prezzo
-            document.getElementById('cost').innerHTML = priceN;
+            document.getElementById('cost').innerHTML = priceN + '€';
         } else {
             console.log(priceN);
 
@@ -57,10 +59,43 @@ document.getElementById('conferma').addEventListener('click',
             document.getElementById('offer').innerHTML = 'Biglietto Semplice';
 
             //Stampaggio Prezzo
-            document.getElementById('cost').innerHTML = priceN;
+            document.getElementById('cost').innerHTML = priceN + '€';
         }
     } else {
         alert('Inserisci la tua età!!!')
     }
         
 });
+
+// FUNZIONE PER ELIMINARE
+document.getElementById('annulla').addEventListener('click',
+    function(){
+
+        // Nome Utente
+        document.getElementById('utenteN').value = '';
+        
+        // KM Biglietto
+        document.getElementById('destination').value = '';
+
+        // Nome Utente
+        document.getElementById('named').innerHTML = '';
+        
+        // OFFERTA
+        document.getElementById('offer').innerHTML = '';
+
+        // CARROZZA
+        document.getElementById('carrozza').innerHTML = '';
+        
+        // CODICE CP
+        document.getElementById('code').innerHTML = '';
+
+        // COSTO BIGLIETTO
+        document.getElementById('cost').innerHTML = '';
+        
+
+        // SELEZIONE
+        let notSelect = document.getElementById('seniority')
+
+        notSelect.value = 0;
+    }
+);
