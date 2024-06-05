@@ -7,3 +7,15 @@
 body{
     text-align: center;
 }
+
+/* GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    border: 1px solid red;
+}
+
+.grid-item{
+    border: 1px solid red;
+}
+    
